@@ -134,8 +134,7 @@ epochs = 20
 batch_size = 25
 
 # TASK 5
-training_df.corr(method = 'pearson')
-
+print(training_df.corr())
 
 # Discard any pre-existing version of the model.
 my_model = None
@@ -145,6 +144,7 @@ my_model = build_model(learning_rate)
 weight, bias, epochs, rmse = train_model(my_model, training_df, 
                                          my_feature, my_label,
                                          epochs, batch_size)
+
 
 print("\nThe learned weight for your model is %.4f" % weight)
 print("The learned bias for your model is %.4f\n" % bias )
@@ -167,4 +167,4 @@ def predict_house_values(n, feature, label):
                                    training_df[label][10000 + i],
                                    predicted_values[i][0]))
 
-# predict_house_values(10, my_feature, my_label)
+predict_house_values(10, my_feature, my_label)
