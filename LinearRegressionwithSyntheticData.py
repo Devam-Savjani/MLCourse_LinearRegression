@@ -3,7 +3,7 @@ import tensorflow as tf
 from matplotlib import pyplot as plt
 
 
-#@title Define the functions that build and train a model
+#Define the functions that build and train a model
 def build_model(my_learning_rate):
   """Create and compile a simple linear regression model."""
   # Most simple tf.keras models are sequential. 
@@ -57,7 +57,7 @@ def train_model(model, feature, label, epochs, batch_size):
 
 print("\nDefined create_model and train_model\n")
 
-#@title Define the plotting functions
+#Define the plotting functions
 def plot_the_model(trained_weight, trained_bias, feature, label):
   """Plot the trained model against the training feature and label."""
 
